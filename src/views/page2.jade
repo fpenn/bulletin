@@ -1,0 +1,27 @@
+doctype
+html
+	head
+		title #{title} - Fre's Bulletin Board
+		style(type="text/css"): include ../styles/home.css
+		
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+		
+		body
+			#banner
+				h1 Message board
+			#container
+				p
+				#menu
+					a(href="/") Add
+					a(href="/view") View
+
+				#messages
+					ul
+						each i in data
+							h4= i.title
+							p= i.body
+							
+							
+
+				
+		script(type='text/javascript'): include ../scripts/index.js

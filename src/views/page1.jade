@@ -1,0 +1,28 @@
+doctype
+html
+	head
+		title #{title} - Fre's Bulletin Board
+		style(type="text/css"): include ../styles/home.css
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+		
+	body
+		header
+			#banner
+				h1 Message board
+			#container
+				p
+				#menu
+					a(href="/") Add
+					a(href="/view") View
+				#messageForm
+					form(action="http://localhost:3000/data" method="post")
+						p Title of your message
+						input(type="text", name="title")
+						p Type your message
+						input(type="text", name="message")
+						p
+						input#submit(type="submit", value="Add" name="submit")
+				#complete
+
+
+	script(type='text/javascript'): include ../scripts/index.js
